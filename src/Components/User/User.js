@@ -4,8 +4,8 @@ import './User.css';
 
 
 
-const User = ({user, getUser}) => {
-    const {id, name} = user;
+const User = ({user}) => {
+    const {id, name, username, email} = user;
 
     return (
         <div className={"userItemWrap"}>
@@ -14,11 +14,19 @@ const User = ({user, getUser}) => {
                     {id}
                 </div>
 
-                <div>
+                <div className={"name"}>
                     {name}
                 </div>
+
+                <div className={"username"}>
+                    {username}
+                </div>
+
+                <div className={"email"}>
+                    {email}
+                </div>
+
             </div>
-            <button onClick={()=> {getUser(user)}}>Get details</button>
         </div>
     );
 };

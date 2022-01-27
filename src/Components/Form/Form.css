@@ -1,0 +1,11 @@
+label {
+    margin-left: 20px;
+}
+
+button{
+    color: white;
+    background: black;
+    padding-left: 20px ;
+    padding-right: 20px ;
+    font-weight: bold;
+}
