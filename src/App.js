@@ -5,17 +5,21 @@ import UserDetails from "./Components/UserDetails/UserDetails";
 import Posts from "./Components/Posts/Posts"
 import {useState} from "react";
 
+import {postService} from "./services/post.service"
+
 function App() {
 
     const [user, setUser] = useState(null);
     const [id, setId] = useState(null);
+    const [posts, setPosts] = useState([]);
+
 
     const getUser = (user) => {
         setUser(user);
     }
 
     const getUserId = (id) => {
-        setId(id);
+        postService.getByUserId(id).then(value => setPosts([...value]))
     }
 
 
@@ -27,7 +31,7 @@ function App() {
             </div>
 
             <div className={"bottom"}>
-                {id && <Posts id={id}/>}
+                {posts.length>0 && <Posts posts={posts}/>}
             </div>
         </div>
     );
