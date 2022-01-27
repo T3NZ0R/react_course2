@@ -1,0 +1,9 @@
+.usersWrap{
+    display: flex;
+    flex-direction: row;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}

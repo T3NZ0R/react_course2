@@ -1,0 +1,10 @@
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.postsTop{
+    margin-top: 30px;
+    border-top: black solid 5px;
+}

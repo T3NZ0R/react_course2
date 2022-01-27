@@ -1,0 +1,39 @@
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.info, .address, .company {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.user{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border: black solid 3px;
+    border-radius: 15px;
+}
+
+.wrap{
+    width: 1000px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4{
+    padding-top: 0;
+}
+
+.wrap > button{
+    width: 150px;
+    height: 30px;
+    background: khaki;
+}

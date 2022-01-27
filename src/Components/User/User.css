@@ -1,0 +1,19 @@
+.userItemWrap{
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    border: black 3px solid;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+button, .id{
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.infoWrap{
+    width: 220px;
+    display: flex;
+}
