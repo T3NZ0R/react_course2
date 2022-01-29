@@ -10,8 +10,8 @@ const Form = ({getFilter}) => {
         setForm({...form, ...eventInfo})
     }
 
-    const onSubmit = (e) => {
-        e.preventDefault()
+    const getFormInfo = (e) => {
+         e.preventDefault()
         getFilter(form)
     }
 
@@ -21,7 +21,7 @@ const Form = ({getFilter}) => {
                 <label>Name: <input type="text" name={'name'} value={form.name} onChange={formHandler}/></label>
                 <label>Username: <input type="text" name={'username'} value={form.username} onChange={formHandler}/></label>
                 <label>Email: <input type="text" name={'email'} value={form.email} onChange={formHandler}/></label>
-                <button onClick={onSubmit}>Filter</button>
+                <button onClick={getFormInfo}>Filter</button>
             </form>
         </div>
     );
