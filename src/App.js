@@ -1,38 +1,25 @@
+import ReactDom from "react-dom";
+import {Route, Routes, Link} from "react-router-dom";
+
 import './App.css';
+import Users from './Pages/Users'
+import Posts from './Pages/Posts'
 
-import Users from './Components/Users/Users'
-import UserDetails from "./Components/UserDetails/UserDetails";
-import Posts from "./Components/Posts/Posts"
-import {useState} from "react";
 
-import {postService} from "./services/post.service"
+
 
 function App() {
 
-    const [user, setUser] = useState(null);
-    const [id, setId] = useState(null);
-    const [posts, setPosts] = useState([]);
-
-
-    const getUser = (user) => {
-        setUser(user);
-    }
-
-    const getUserId = (id) => {
-        postService.getByUserId(id).then(value => setPosts([...value]))
-    }
-
-
     return (
         <div className="App">
-            <div className={"top"}>
-                <Users getUser={getUser}/>
-                {user && <UserDetails user={user} getUserId={getUserId}/>}
+            <div className={"links"}>
+                <button><Link to={'/users'}>Users</Link></button>
+                <button><Link to={'/posts'}>Posts</Link></button>
             </div>
-
-            <div className={"bottom"}>
-                {posts.length>0 && <Posts posts={posts}/>}
-            </div>
+            <Routes>
+                <Route path={'/users'} element={<Users/>}/>
+                <Route path={'/posts'} element={<Posts/>}/>
+            </Routes>
         </div>
     );
 }
