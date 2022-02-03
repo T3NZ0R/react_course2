@@ -1,0 +1,25 @@
+.postDetails {
+    width: 80%;
+    border: black solid 3px;
+    border-radius: 15px;
+}
+
+.postDetailsWrap > h2 {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.postDetailsTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border-top: black solid 5px;
+}
+
+.buttonWrap {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}

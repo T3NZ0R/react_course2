@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import User from "../User/User";
+import User from "../../Components/User/User";
 import "./Users.css";
-import {userService} from "../../services/user.service"
+import {userService} from "../../services/user.service";
+import {Outlet} from "react-router-dom";
 
 
 const Users = ({getUser}) => {
@@ -18,8 +19,9 @@ const Users = ({getUser}) => {
                 <h2>Users</h2>
                 {users.map(item => <User key={item.id} user={item} getUser={getUser}/>)}
             </div>
+            <Outlet/>
         </div>
     );
 };
 
-export default Users;
+export {Users};

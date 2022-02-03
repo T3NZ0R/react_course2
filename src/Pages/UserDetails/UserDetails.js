@@ -1,41 +1,47 @@
 import React from 'react';
 
+import {Link, Outlet, useLocation} from "react-router-dom";
+import Posts from "../Posts/Posts";
+
 import "./UserDetails.css"
 
-const UserDetails = ({user, getUserId}) => {
+const UserDetails = () => {
 
-    const {id, name, username, email, phone, website, address, company } = user;
+    let {state: user} = useLocation();
+
+    const {id, name, username, email, phone, website, address, company} = user;
 
     return (
-        <div className={"wrap"}>
-            <h2>User Details</h2>
-            <div className={"user"}>
-                <div className={"info"}>
-                    <h3>Private information</h3>
-                    <div>
-                        ID: {id}
-                    </div>
+        <div>
+            <div className={"wrap"}>
+                <h2>User Details</h2>
+                <div className={"user"}>
+                    <div className={"info"}>
+                        <h3>Private information</h3>
+                        <div>
+                            ID: {id}
+                        </div>
 
-                    <div>
-                        Name: {name}
-                    </div>
+                        <div>
+                            Name: {name}
+                        </div>
 
-                    <div>
-                        Username: {username}
-                    </div>
+                        <div>
+                            Username: {username}
+                        </div>
 
-                    <div>
-                        Email: {email}
-                    </div>
+                        <div>
+                            Email: {email}
+                        </div>
 
-                    <div>
-                        Phone: {phone}
-                    </div>
+                        <div>
+                            Phone: {phone}
+                        </div>
 
-                    <div>
-                        Website: {website}
+                        <div>
+                            Website: {website}
+                        </div>
                     </div>
-                </div>
                     <div className={"address"}>
                         <h3>Address</h3>
                         <div>
@@ -80,10 +86,12 @@ const UserDetails = ({user, getUserId}) => {
                         </div>
                     </div>
 
+                </div>
+                <button><Link to={'posts'} state={user}>Get posts</Link></button>
             </div>
-            <button onClick={()=>{getUserId(id)}}>Get posts</button>
+            <Outlet/>
         </div>
     );
 };
 
-export default UserDetails;
+export {UserDetails};

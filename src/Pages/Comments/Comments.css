@@ -1,0 +1,12 @@
+.commentsTop{
+    width: 70%;
+}
+.comments{
+    display: flex;
+    flex-direction: column;
+}
+
+.commentsTop{
+    border-top: black solid 5px;
+    margin-top: 20px;
+}

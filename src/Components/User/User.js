@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+
 
 import './User.css';
 
@@ -18,7 +20,7 @@ const {id, name} = user;
                 {name}
             </div>
 </div>
-            <button onClick={()=> {getUser(user)}}>Get details</button>
+            <button><Link to={`${id}`} state={user}>Get details</Link></button>
         </div>
     );
 };

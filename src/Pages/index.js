@@ -1,0 +1,7 @@
+export * from './Comments/Comments'
+export * from './Home'
+export * from './PostsWithButton/PostsWithButton'
+export * from './Posts/Posts'
+export * from './Users/Users'
+export * from './PostsDetails/PostsDetails'
+export * from './UserDetails/UserDetails'

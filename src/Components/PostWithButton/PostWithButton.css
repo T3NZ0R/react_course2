@@ -1,0 +1,16 @@
+.postWB{
+    width: 47%;
+    border: black solid 3px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.postButton{
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
