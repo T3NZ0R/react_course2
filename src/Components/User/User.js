@@ -6,7 +6,7 @@ import './User.css';
 
 
 
-const User = ({user, getUser}) => {
+const User = ({user}) => {
 const {id, name} = user;
 
     return (
