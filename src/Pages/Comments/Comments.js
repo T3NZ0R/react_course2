@@ -8,9 +8,8 @@ import {useLocation, useParams} from "react-router-dom";
 
 const Comments = () => {
 
-    let {state: post} = useLocation();
+    let {id} = useParams();
 
-    const {id} = post;
 
     let [comments, setComments] = useState([]);
     useEffect(() => {

@@ -8,9 +8,7 @@ import {useLocation, useParams} from "react-router-dom";
 
 const Posts = () => {
 
-    let {state: user} = useLocation();
-
-    const {id} = user;
+    let {id} = useParams();
 
     let [posts, setPosts] = useState([]);
 

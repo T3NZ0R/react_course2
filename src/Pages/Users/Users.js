@@ -5,7 +5,7 @@ import {userService} from "../../services/user.service";
 import {Outlet} from "react-router-dom";
 
 
-const Users = ({getUser}) => {
+const Users = () => {
 
     let [users, setUsers] = useState([]);
 
@@ -17,7 +17,7 @@ const Users = ({getUser}) => {
         <div className={"usersWrap"}>
             <div>
                 <h2>Users</h2>
-                {users.map(item => <User key={item.id} user={item} getUser={getUser}/>)}
+                {users.map(item => <User key={item.id} user={item}/>)}
             </div>
             <Outlet/>
         </div>
