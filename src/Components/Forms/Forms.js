@@ -3,17 +3,21 @@ import {useState} from 'react';
 
 const Forms = ({dispatch}) => {
 
-    const [cat, setCat] = useState({name:''});
+    const [form, setForm] = useState({cat:'', dog:''});
 
     const formHandler = (e) => {
-        const eventInfo = {...cat, [e.target.name]: e.target.value};
-        console.log(cat);
-        setCat({...cat, ...eventInfo})
+        const eventInfo = {...form, [e.target.name]: e.target.value};
+        setForm({...form, ...eventInfo})
     }
 
-    const getFormInfo = (e) => {
+    const getCat = (e) => {
         e.preventDefault();
-        dispatch({type: 'cat', payload: cat.name});
+        dispatch({type: 'AddCat', payload: form.cat});
+    }
+
+    const getDog = (e) => {
+        e.preventDefault();
+        dispatch({type: 'AddDog', payload: form.dog});
     }
 
 
@@ -21,8 +25,10 @@ const Forms = ({dispatch}) => {
         <div>
 
             <form>
-                <label>Cat: <input type="text" name={"name"} value={cat.name} onChange={formHandler}/></label>
-                <button onClick={getFormInfo}>Add</button>
+                <label>Cat: <input type="text" name={"cat"} value={form.cat} onChange={formHandler}/></label>
+                <button onClick={getCat}>Add</button>
+                <label>Dog: <input type="text" name={"dog"} value={form.dog} onChange={formHandler}/></label>
+                <button onClick={getDog}>Add</button>
             </form>
 
         </div>

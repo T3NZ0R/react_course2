@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Cat = (cat) => {
+const Dogs = () => {
     return (
         <div>
-            {cat}
+            
         </div>
     );
 };
 
-export default Cat;
+export default Dogs;
