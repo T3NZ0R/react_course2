@@ -7,8 +7,7 @@ import Forms from './Components/Forms/Forms'
 const reduser = (state, action) => {
     switch (action.type) {
         case 'cat':
-
-            return ;
+            return {...state, state.cats: state.cats.push(action.payload)};
 
     }
     return state;
@@ -17,6 +16,7 @@ const reduser = (state, action) => {
 const App = () => {
 
     const [state, dispatch] = useReducer(reduser, {cats: [], dogs: []})
+    console.log(state);
     return (
         <div className={"wrap"}>
             <Forms dispatch={dispatch}/>
