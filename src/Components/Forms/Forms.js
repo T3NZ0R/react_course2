@@ -12,9 +12,8 @@ const Forms = ({dispatch}) => {
     }
 
     const getFormInfo = (e) => {
-        e.preventDefault()
-        console.log(cat);
-        dispatch({type: 'cat', payload: cat})
+        e.preventDefault();
+        dispatch({type: 'cat', payload: cat.name});
     }
 
 
@@ -22,7 +21,7 @@ const Forms = ({dispatch}) => {
         <div>
 
             <form>
-                <label>Name: <input type="text" name={"cat"} value={cat.name} onChange={formHandler}/></label>
+                <label>Cat: <input type="text" name={"name"} value={cat.name} onChange={formHandler}/></label>
                 <button onClick={getFormInfo}>Add</button>
             </form>
 
