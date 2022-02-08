@@ -1,0 +1,14 @@
+button{
+    margin: 5px;
+}
+
+.wrap{
+    display: flex;
+}
+
+.counter{
+    border: black solid 3px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: 50px;
+}
