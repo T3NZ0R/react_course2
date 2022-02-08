@@ -6,6 +6,9 @@ import Forms from './Components/Forms/Forms'
 
 const reduser = (state, action) => {
     switch (action.type) {
+        case 'cat':
+            console.log(state);
+            return state;
 
     }
     return state;
