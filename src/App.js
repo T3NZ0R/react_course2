@@ -16,10 +16,10 @@ const reducer = (state, action) => {
             state.dogs.push(action.payload);
             return {...state};
         case 'DelCat':
-            state.cats = state.cats.filter
+            state.cats = state.cats.filter(cat=>!cat.includes(action.payload));
             return {...state};
         case 'DelDog':
-            state.dogs.push(action.payload);
+            state.dogs = state.dogs.filter(dog=>!dog.includes(action.payload));
             return {...state};
 
     }
@@ -34,7 +34,7 @@ const App = () => {
             <Forms dispatch={dispatch}/>
             <div className={"itemWrap"}>
                 <Cats cats={state.cats} dispatch={dispatch}/>
-                <Dogs dogs={state.dogs} />
+                <Dogs dogs={state.dogs} dispatch={dispatch}/>
             </div>
         </div>
     );

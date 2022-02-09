@@ -1,12 +1,12 @@
 import React from 'react';
-import Cat from '../Cat/Cat'
+import Dog from '../Dog/Dog'
 import { v4 as uuid } from 'uuid';
 
 
-const Dogs = ({dogs}) => {
+const Dogs = ({dogs, dispatch}) => {
     return (
         <div>
-            {dogs.map(item => <Cat key={uuid()} cat={item}/>)}
+            {dogs.map(item => <Dog key={uuid()} dog={item} dispatch={dispatch}/>)}
         </div>
     );
 };
