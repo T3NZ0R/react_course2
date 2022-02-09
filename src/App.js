@@ -11,15 +11,19 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'AddCat':
             state.cats.push(action.payload);
-            console.log(state);
             return {...state};
         case 'AddDog':
             state.dogs.push(action.payload);
-            console.log(state);
+            return {...state};
+        case 'DelCat':
+            state.cats = state.cats.filter
+            return {...state};
+        case 'DelDog':
+            state.dogs.push(action.payload);
             return {...state};
 
     }
-    return state;
+    return {...state};
 }
 
 const App = () => {
@@ -28,9 +32,9 @@ const App = () => {
     return (
         <div className={"wrap"}>
             <Forms dispatch={dispatch}/>
-            <div>
-                <Cats cats={state.cats}/>
-                {/*<Dogs dogs={state.dogs}/>*/}
+            <div className={"itemWrap"}>
+                <Cats cats={state.cats} dispatch={dispatch}/>
+                <Dogs dogs={state.dogs} />
             </div>
         </div>
     );
