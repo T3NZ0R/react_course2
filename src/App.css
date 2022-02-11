@@ -18,3 +18,8 @@ button{
     display: flex;
     column-gap: 100px;
 }
+
+.formsWrap{
+    display: flex;
+    column-gap: 40px;
+}
