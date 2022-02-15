@@ -1,0 +1,10 @@
+.carWrap{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border: black solid 3px;
+    border-radius: 15px;
+    padding: 5px;
+    align-items: center;
+    width: 100px;
+}
