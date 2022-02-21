@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {carReducer} from "./car.slice"
+import {taskReducer} from "./task.slice"
 
 const store = configureStore({
     reducer: {
-        carReducer
+        taskReducer
     }
 
 

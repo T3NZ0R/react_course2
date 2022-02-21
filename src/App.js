@@ -1,14 +1,14 @@
 import React from 'react';
 
 import './App.css';
-import {Cars, Form} from './components'
+import {Tasks, Form} from './components';
 
 const App = () => {
 
     return (
         <div>
             <Form />
-            <Cars />
+            <Tasks />
         </div>
     );
 };
