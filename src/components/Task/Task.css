@@ -1,10 +1,15 @@
-.carWrap{
+.taskWrap{
     display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    border: black solid 3px;
-    border-radius: 15px;
+    column-gap: 5px;
+    font-size: 30px;
+    font-weight: bold;
     padding: 5px;
-    align-items: center;
-    width: 100px;
+}
+
+.line{
+    text-decoration: line-through;
+}
+
+.none{
+
 }

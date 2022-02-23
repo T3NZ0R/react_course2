@@ -1,12 +1,13 @@
 import React from 'react';
 
 import './App.css';
-import {Tasks, Form} from './components';
+import {Tasks, Form, Counter} from './components';
 
 const App = () => {
 
     return (
         <div>
+            <Counter/>
             <Form />
             <Tasks />
         </div>
